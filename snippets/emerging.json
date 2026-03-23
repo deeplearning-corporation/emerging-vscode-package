@@ -1,0 +1,32 @@
+{
+  "Print statement": {
+    "prefix": "print",
+    "body": ["print ${1:expression}"],
+    "description": "Print a value to console"
+  },
+  "Variable declaration": {
+    "prefix": "let",
+    "body": ["let ${1:name} = ${2:value}"],
+    "description": "Declare a variable"
+  },
+  "If statement": {
+    "prefix": "if",
+    "body": ["if (${1:condition}) {", "\t${2:// code}", "}"],
+    "description": "If statement"
+  },
+  "If-else statement": {
+    "prefix": "ifelse",
+    "body": ["if (${1:condition}) {", "\t${2:// code}", "} else {", "\t${3:// code}", "}"],
+    "description": "If-else statement"
+  },
+  "For loop": {
+    "prefix": "for",
+    "body": ["for (let ${1:i} = 0; ${1:i} < ${2:10}; ${1:i}++) {", "\t${3:// code}", "}"],
+    "description": "For loop"
+  },
+  "Function definition": {
+    "prefix": "func",
+    "body": ["function ${1:name}(${2:params}) {", "\t${3:// code}", "}"],
+    "description": "Define a function"
+  }
+}

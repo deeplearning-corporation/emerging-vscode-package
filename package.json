@@ -1,0 +1,93 @@
+{
+  "name": "emerging-language",
+  "displayName": "Emerging Language",
+  "description": "Emerging Programming Language Support - A simple and modern programming language",
+  "version": "0.0.1",
+  "publisher": "Emerging",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deeplearning-corporation/emerging-vscode-package"
+  },
+  "homepage": "https://github.com/deeplearning-corporation/emerging-vscode-package",
+  "bugs": {
+    "url": "https://github.com/deeplearning-corporation/emerging-vscode-package/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Education"
+  ],
+  "keywords": [
+    "emerging",
+    "programming-language",
+    "language-support",
+    "education"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e2e",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:emerging"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "emerging",
+        "aliases": ["Emerging", "emerging"],
+        "extensions": [".emg", ".emerging"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "emerging",
+        "scopeName": "source.emerging",
+        "path": "./syntaxes/emerging.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "emerging.runCode",
+        "title": "Emerging: Run Code",
+        "category": "Emerging"
+      },
+      {
+        "command": "emerging.showVersion",
+        "title": "Emerging: Show Version",
+        "category": "Emerging"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "emerging.runCode",
+        "key": "ctrl+shift+e",
+        "mac": "cmd+shift+e",
+        "when": "editorLangId == emerging"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "emerging",
+        "path": "./snippets/emerging.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "20.x",
+    "typescript": "^5.3.0"
+  }
+}

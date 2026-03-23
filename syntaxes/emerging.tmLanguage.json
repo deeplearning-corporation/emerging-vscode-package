@@ -1,0 +1,70 @@
+{
+  "scopeName": "source.emerging",
+  "name": "Emerging",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.emerging",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.emerging",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "patterns": [
+        {
+          "name": "comment.block.emerging"
+        }
+      ]
+    },
+    {
+      "name": "keyword.control.emerging",
+      "match": "\\b(let|var|const|if|else|for|while|return|function|class|new|this|import|export|from|as|try|catch|finally|throw|break|continue)\\b"
+    },
+    {
+      "name": "keyword.operator.emerging",
+      "match": "(==|!=|<=|>=|<|>|&&|\\|\\||\\+|\\-|\\*|/|=|\\+=|-=|\\*=|/=|%|\\+\\+|--)"
+    },
+    {
+      "name": "constant.numeric.emerging",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "constant.language.emerging",
+      "match": "\\b(true|false|null|undefined)\\b"
+    },
+    {
+      "name": "string.quoted.double.emerging",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.emerging",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.emerging",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.emerging",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "entity.name.function.emerging",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()"
+    },
+    {
+      "name": "variable.parameter.emerging",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*[,)])"
+    },
+    {
+      "name": "storage.type.emerging",
+      "match": "\\b(string|number|boolean|void|any)\\b"
+    }
+  ]
+}
